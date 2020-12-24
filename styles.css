@@ -1,0 +1,45 @@
+body {
+    background-color: black;
+}
+
+.game {
+    background-color: green;
+    width: 800px;
+    height: 400px;
+    position: absolute;
+    top: calc(50% - 200px);
+    left: calc(50% - 400px);
+    overflow: hidden;
+}
+
+#spaceship {
+    background-color: white;
+    width: 100px;
+    height: 80px;
+    left: 200px;
+    position: inherit;
+    background: none;
+}
+
+.obstacle {
+    background-color: yellow;
+    width: 80px;
+    height: 80px;
+    position: inherit;
+    background: none;
+}
+
+.game_img {
+    width: inherit;
+    height: inherit;
+}
+
+.planet_img {
+    width: inherit;
+    height: inherit;
+}
+
+.spaceship_img {
+    width: inherit;
+    height: inherit;
+}
