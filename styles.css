@@ -3,7 +3,6 @@ body {
 }
 
 .game {
-    background-color: green;
     width: 800px;
     height: 400px;
     position: absolute;
@@ -13,7 +12,6 @@ body {
 }
 
 #spaceship {
-    background-color: white;
     width: 100px;
     height: 80px;
     left: 200px;
@@ -22,24 +20,22 @@ body {
 }
 
 .obstacle {
-    background-color: yellow;
     width: 80px;
     height: 80px;
     position: inherit;
     background: none;
 }
 
-.game_img {
-    width: inherit;
-    height: inherit;
-}
-
-.planet_img {
-    width: inherit;
-    height: inherit;
-}
-
+.game_img,
+.planet_img,
 .spaceship_img {
     width: inherit;
     height: inherit;
+}
+
+#score {
+    position: inherit;
+    right: 5px;
+    color: white;
+    font-family: monospace;
 }

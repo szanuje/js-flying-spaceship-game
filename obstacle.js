@@ -1,5 +1,5 @@
 export default class Obstacle {
-    constructor(htmlElem) {
+    constructor(htmlElem, scoreUpdater) {
         this.timer;
         this.elem = htmlElem;
         this.speed = 1.0;
@@ -15,6 +15,7 @@ export default class Obstacle {
             'img/planet_7.png',
             'img/planet_8.png',
         ]
+        this.scoreUpdater = scoreUpdater;
     }
 
     switchBackground() {
@@ -39,6 +40,7 @@ export default class Obstacle {
         this.elem.style.top = (this.randInt(0, 3) * 100) + 50 + 'px';
         this.increaseSpeed();
         this.switchBackground();
+        this.scoreUpdater();
     }
 
     increaseSpeed() {

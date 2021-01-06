@@ -1,10 +1,14 @@
+import Spaceship from './spaceship.js'
+import Obstacle from './obstacle.js'
+
 export default class Game {
 
-    constructor(spaceship, obstacle1, obstacle2) {
+    constructor() {
         this.timer = null;
-        this.spaceship = spaceship;
-        this.obstacle1 = obstacle1;
-        this.obstacle2 = obstacle2;
+        this.spaceship = new Spaceship(document.getElementById('spaceship'));
+        this.obstacle1 = new Obstacle(document.getElementById('obstacle_1'), this.updateScore.bind(this));
+        this.obstacle2 = new Obstacle(document.getElementById('obstacle_2'), this.updateScore.bind(this));
+        this.score = 0;
     }
 
     moveShip(e) {
@@ -62,6 +66,12 @@ export default class Game {
         this.obstacle2.stop();
         clearInterval(this.timer)
         this.timer = null;
+    }
+
+    updateScore() {
+        this.score++;
+        document.getElementById('score-value').innerHTML = this.score;
+        console.log(this.score);
     }
 
     async start() {
